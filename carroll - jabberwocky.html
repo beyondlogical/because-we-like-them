@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Jabberwocky - Lewis Carroll</title>
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+            background-image: url('img/20140924c.png');
+            background-repeat:repeat;
+            background-position:left top;
+            background-attachment:fixed;
+            }
+		#poem {
+            margin-left:auto;
+            margin-right:auto;
+            width: 22em;
+            background-color:DarkOliveGreen;
+            padding:1em;
+            // font-family: 'Shadows Into Light', cursive;
+            font-family: 'Raleway', sans-serif;
+            font-size:16pt;
+            border: 3px solid black;
+
+            //background-image: url('img/jabberwocky.jpg');
+            background-repeat:no-repeat;
+            background-position:center top;
+            background-attachment:scroll;
+            }
+        #poem .title,
+        #poem p {
+        }
+		#title {
+            font-weight:bold;
+            text-align:center;
+            font-size:24pt;
+        }
+		.content {}
+		.stanza {}
+		.stanza.even {padding-left:2em;}
+		#author {
+            font-weight:bold;
+            text-align:right;
+            width:100%;
+        }
+		#author:before {
+            content:'\2014'; // emdash
+        }
+		#publication {
+            font-size:12pt;
+            margin:0 2em;
+        }
+        #publication .pubtitle {
+            text-decoration:underline;
+        }
+
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            color: black;
+            text-decoration:none;
+        }
+        
+	</style>
+</head>
+<body>
+    <figure id="poem">
+        <section id="title"><a href="http://en.wikipedia.org/wiki/Jabberwocky">Jabberwocky</a></section>
+
+        <section class="content">
+
+        <p class="stanza">
+        'Twas brillig, and the slithy toves<br>
+        Did gyre and gimble in the wabe;<br>
+        All mimsy were the borogoves,<br>
+        And the mome raths outgrabe.<br>
+        </p>
+        <p class="stanza even">
+        "Beware the Jabberwock, my son!<br>
+        The jaws that bite, the claws that catch!<br>
+        Beware the Jubjub bird, and shun<br>
+        The frumious Bandersnatch!"<br>
+        </p>
+        <p class="stanza">
+        He took his vorpal sword in hand:<br>
+        Long time the manxome foe he sought &mdash;<br>
+        So rested he by the Tumtum tree,<br>
+        And stood awhile in thought.<br>
+        </p>
+        <p class="stanza even">
+        And as in uffish thought he stood,<br>
+        The Jabberwock, with eyes of flame,<br>
+        Came whiffling through the tulgey wood,<br>
+        And burbled as it came!<br>
+        </p>
+        <p class="stanza">
+        One, two! One, two! and through and through<br>
+        The vorpal blade went snicker-snack!<br>
+        He left it dead, and with its head<br>
+        He went galumphing back.<br>
+        </p>
+        <p class="stanza even">
+        "And hast thou slain the Jabberwock?<br>
+        Come to my arms, my beamish boy!<br>
+        O frabjous day! Callooh! Callay!"<br>
+        He chortled in his joy.<br>
+        </p>
+        <p class="stanza">
+        'Twas brillig, and the slithy toves<br>
+        Did gyre and gimble in the wabe;<br>
+        All mimsy were the borogoves,<br>
+        And the mome raths outgrabe.<br>
+        </p>
+
+        <section id="author"><a href="http://en.wikipedia.org/wiki/Lewis_Carroll">Lewis Carroll</a></section>
+        <section id="publication">from <a class="pubtitle" href="http://en.wikipedia.org/wiki/Through_the_Looking-Glass,_and_What_Alice_Found_There">Through the Looking-Glass, and What Alice Found There (1871)</a></section>
+    </figure>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+            $('#poem').hover(
+                function(){
+                    $(this).css('background-image',"url('img/jabberwocky.jpg')");
+                    $('#poem p').css('visibility','hidden');
+                },
+                function(){
+                    $(this).css('background-image','');
+                    $('#poem p').css('visibility','');
+            })
+        });
+    </script>
+</body>
+</html>
