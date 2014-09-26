@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Lady, i will touch you with my mind. - e. e. Cummings</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+            background-color: NavajoWhite;
+            background-image: url('img/20140925a.png');
+            background-repeat:repeat;
+            background-position:left top;
+            background-attachment:fixed;
+            }
+		#poem {
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:3em;
+            width: 28em;
+            background-color:Thistle;
+            padding:1em;
+            font-family: 'Raleway', sans-serif;
+            font-size:16pt;
+            border: 3px solid black;
+
+            background-repeat:no-repeat;
+            background-position:center top;
+            background-attachment:scroll;
+            }
+        #poem .title,
+        #poem p {
+        }
+		#title {
+            font-weight:bold;
+            text-align:center;
+            font-size:24pt;
+        }
+		.content {
+            margin-left:auto;
+            margin-right:auto;
+        }
+		.stanza {}
+		#author {
+            font-weight:bold;
+            text-align:right;
+            width:100%;
+        }
+		#author:before {
+            content:'\2014'; // emdash
+        }
+		#publication {
+            font-size:12pt;
+            margin:0 2em;
+        }
+        #publication .pubtitle {
+            text-decoration:underline;
+        }
+
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            color: black;
+            text-decoration:none;
+        }
+        
+	</style>
+</head>
+<body>
+    <figure id="poem">
+        <section id="title"><a href="http://www.goodreads.com/quotes/60348-xvii-lady-i-will-touch-you-with-my-mind-touch">Lady, i will touch you with my mind.</a></section>
+
+        <section class="content">
+
+            <p class="stanza">
+            Lady, i will touch you with my mind.<br>
+            Touch you and touch and touch<br>
+            until you give<br>
+            me suddenly a smile, shyly obscene<br>
+            </p>
+            <p class="stanza even">
+            (lady i will<br>
+            touch you with my mind.) Touch<br>
+            you,that is all,<br>
+            </p>
+            <p class="stanza">
+            lightly and you utterly will become<br>
+            with infinite ease<br>
+            </p>
+            <p class="stanza even">
+            the poem which i do not write.<br>
+            </p>
+
+        </section>
+
+        <section id="author"><a href="http://en.wikipedia.org/wiki/E._E._Cummings">e. e. cummings</a></section>
+        <section id="publication">from <a class="pubtitle" href="https://www.goodreads.com/book/show/26596.Complete_Poems_1904_1962">Complete Poems 1904-1962</a></section>
+    </figure>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($){
+            $('#poem').hover(
+                function(){
+                    $('#poem p').css('visibility','hidden');
+                },
+                function(){
+                    $('#poem p').css('visibility','');
+            })
+        });
+    </script>
+</body>
+</html>
