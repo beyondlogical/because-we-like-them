@@ -10,12 +10,13 @@
 	<style>
 		body {
             background-image: url('img/20141006a.png');
+            background-size: 300px
             }
 		.poem {
             margin-left:auto;
             margin-right:auto;
             width: 20em;
-            background-color:red;
+            background-color:white;
             padding:1em;
             //font-family: 'Italiano', cursive;
             font-family: 'Dancing Script', cursive;
@@ -50,7 +51,7 @@
 	</style>
 </head>
 <body>
-    <figure class="poem">
+    <figure class="poem white">
         <section class="title"><a href="http://www.poets.org/poetsorg/poem/i-measure-every-grief-i-meet-561">I measure every Grief I meet (561)</a></section>
 
         <section class="content">
@@ -118,10 +119,17 @@
         <section class="author"><a href="http://en.wikipedia.org/wiki/Emily_Dickinson">Emily Dickinson</a></section>
     </figure>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <script type="text/javascript">
-        $.(function(){
-            $('.poem').animate('hover',{color:white},null,'slow');
+        jQuery(function($){
+            setInterval(function(){
+                if( $('.poem').hasClass('red') ) {
+                    $('.poem').animate({'backgroundColor':'#FFFFFF'},{easing:'easeInBack',duration:3600}).addClass('white').removeClass('red');
+                } else {
+                    $('.poem').animate({'backgroundColor':'#FF0000'},{easing:'easeOutBack',duration:3600}).addClass('red').removeClass('white');
+                }
+            },7200);
         });
     </script>
 </body>
